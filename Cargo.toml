@@ -1,0 +1,29 @@
+[package]
+name = "p2p-test"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "server"
+path = "src/server.rs"
+
+[[bin]]
+name = "client"
+path = "src/client.rs"
+
+[dependencies]
+anyhow = "1.0.86"
+async-executor = "1.12.0"
+async-gen = "0.2.3"
+async-io = "2.3.3"
+async-std = "1.12.0"
+async-trait = "0.1.80"
+base-62 = "0.1.1"
+clap = { version = "4.5.7", features = ["derive"] }
+env_logger = "0.11.3"
+futures = "0.3.30"
+log = "0.4.21"
+rand = "0.8.5"
+rkyv = { version = "0.7.44", features = ["uuid", "bytecheck", "validation"] }
+thiserror = "1.0.61"
+uuid = { version = "1.9.1", features = ["v7"] }
